@@ -1,11 +1,11 @@
 image:
-  repository: vadimzededa/fleet
-  tag: test
+  repository: rancher/fleet
+  tag: v0.11.3
   imagePullPolicy: Always
 
 agentImage:
-  repository: vadimzededa/fleet-agent
-  tag: test
+  repository: rancher/fleet-agent
+  tag: v0.11.3
   imagePullPolicy: Always
 
 # For cluster registration the public URL of the Kubernetes API server must be set here
@@ -120,9 +120,9 @@ agent:
       drift: "50"
 
 # Extra environment variables passed to the fleet pods.
-# extraEnv:
-# - name: EXPERIMENTAL_OCI_STORAGE
-#   value: "true"
+extraEnv:
+ - name: VADIM-TEST
+   value: "vadim-test"
 
 # shards:
 #   - id: shard0
