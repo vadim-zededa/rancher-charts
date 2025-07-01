@@ -32,7 +32,7 @@ spec:
       containers:
       - env:
         - name: VADIM
-          value: vadim
+          value: "vadim"
         - name: NAMESPACE
           valueFrom:
             fieldRef:
@@ -125,7 +125,7 @@ spec:
       {{- if not $shard.id }} # Only deploy cleanup and agent management through sharding-less deployment
       - env:
         - name: VADIM
-          value: vadim
+          value: "vadim"
         - name: NAMESPACE
           valueFrom:
             fieldRef:
@@ -168,7 +168,7 @@ spec:
         {{- end }}
       - env:
         - name: VADIM
-          value: vadim
+          value: "vadim"
         - name: NAMESPACE
           valueFrom:
             fieldRef:

@@ -121,7 +121,7 @@ agent:
 
 # Extra environment variables passed to the fleet pods.
 extraEnv:
- - name: VADIM-TEST
+ - name: VADIM
    value: "vadim-test"
 
 # shards:
