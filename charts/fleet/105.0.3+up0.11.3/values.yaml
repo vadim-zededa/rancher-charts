@@ -1,11 +1,11 @@
 image:
-  repository: rancher/fleet
-  tag: v0.11.3
+  repository: zededa/zks-fleet
+  tag: latest
   imagePullPolicy: Always
 
 agentImage:
-  repository: rancher/fleet-agent
-  tag: v0.11.3
+  repository: zededa/zks-fleet-agent
+  tag: latest
   imagePullPolicy: Always
 
 # For cluster registration the public URL of the Kubernetes API server must be set here
@@ -120,9 +120,9 @@ agent:
       drift: "50"
 
 # Extra environment variables passed to the fleet pods.
-extraEnv:
- - name: VADIM
-   value: "vadim-test"
+#extraEnv:
+# - name: my_name
+#   value: "my-value"
 
 # shards:
 #   - id: shard0

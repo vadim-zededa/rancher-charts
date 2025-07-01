@@ -28,7 +28,7 @@ spec:
         {{- end }}
     spec:
       imagePullSecrets:
-      - name: zks-fleet-image-secret #vf hard code for now!!!!! sks-server will create this secret before this deployment will be created
+      - name: zks-fleet-image-secret #vf hard code for now! sks-server will create this secret before this deployment will be created
       containers:
       - env:
         - name: VADIM
