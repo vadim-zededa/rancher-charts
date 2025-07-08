@@ -31,8 +31,6 @@ spec:
       - name: zks-fleet-image-secret #vf hard code for now! sks-server will create this secret before this deployment will be created
       containers:
       - env:
-        - name: VADIM
-          value: "vadim"
         - name: NAMESPACE
           valueFrom:
             fieldRef:
@@ -124,8 +122,6 @@ spec:
             name: tmp
       {{- if not $shard.id }} # Only deploy cleanup and agent management through sharding-less deployment
       - env:
-        - name: VADIM
-          value: "vadim"
         - name: NAMESPACE
           valueFrom:
             fieldRef:
@@ -167,8 +163,6 @@ spec:
             - ALL
         {{- end }}
       - env:
-        - name: VADIM
-          value: "vadim"
         - name: NAMESPACE
           valueFrom:
             fieldRef:
